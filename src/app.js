@@ -1,6 +1,8 @@
 const { Client, MessageEmbed, MessageMentions } = require("discord.js");
 const { run, getAnimePage }= require("./Utilities/scrapper");
 
+require("dotenv").config();
+
 const client = new Client();
 
 client.on("ready", async () =>{
@@ -93,5 +95,5 @@ client.on("message", async msg =>{
 
 });
 
-client.login("NzY0NzI3NjQ4NTI5NTQ3Mjk1.X4KeHw.scNg5QaUDENC9QDGZkvwoiH-J68");
+client.login(process.env.TOKEN_BOT);
 
